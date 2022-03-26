@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/wonseok/Desktop/AlamofireTest/namdo-menu.xcodeproj">
+      location = "group:namdo-menu.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

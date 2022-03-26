@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlamofireTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="namdo_menu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,8 +24,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="159.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="center" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQy-er-IVx">
-                                                <rect key="frame" x="0.0" y="0.0" width="73.5" height="159.5"/>
-                                                <state key="normal" title="Button" image="arrow.left.square.fill" catalog="system"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="24.5" height="159.5"/>
+                                                <state key="normal" title=" " image="arrow.left.square.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="leftButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1fg-m3-2xq"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iso-Ho-6Mq">
                                                 <rect key="frame" x="162.5" y="0.0" width="29.5" height="159.5"/>
@@ -34,8 +37,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If6-w8-zGW">
-                                                <rect key="frame" x="280.5" y="0.0" width="73.5" height="159.5"/>
-                                                <state key="normal" title="Button" image="arrow.right.square.fill" catalog="system"/>
+                                                <rect key="frame" x="329.5" y="0.0" width="24.5" height="159.5"/>
+                                                <state key="normal" title=" " image="arrow.right.square.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="rightButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WaC-Gm-jOg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

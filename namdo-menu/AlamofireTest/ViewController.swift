@@ -11,6 +11,7 @@ import SwiftSoup
 
 class ViewController: UIViewController {
 
+    var k = 0
     
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -35,7 +36,8 @@ class ViewController: UIViewController {
                     debugPrint(response)
                 }
         */
-
+        
+        
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded"
         ]
@@ -97,10 +99,10 @@ class ViewController: UIViewController {
                     print("day count : \(tableDayContent.count)")
                 }
                 
-                self.breakfastLabel.text! = tableFoodContent[0]
-                self.lunchLabel.text! = tableFoodContent[1]
-                self.dinnerLabel.text! = tableFoodContent[2]
-                self.dateLabel.text! = tableDayContent[0]
+                self.breakfastLabel.text! = tableFoodContent[3*self.k] // 3의 배수
+                self.lunchLabel.text! = tableFoodContent[3*self.k + 1] // 3x +1
+                self.dinnerLabel.text! = tableFoodContent[3*self.k + 2] // 3x +2
+                self.dateLabel.text! = tableDayContent[self.k] //
 
                 
                 
@@ -120,7 +122,21 @@ class ViewController: UIViewController {
             }
         }
        
+    @IBAction func rightButtonTapped(_ sender: Any) {
+        if(k<6){
+            k = k+1
+        }
+        viewDidLoad()
+        
     }
+    @IBAction func leftButtonTapped(_ sender: Any) {
+        if(k>0){
+            k = k-1
+            
+        }
+        viewDidLoad()
+    }
+}
 
 
 
